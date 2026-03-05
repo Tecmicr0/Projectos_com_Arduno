@@ -1,6 +1,6 @@
 #include <SoftwareSerial.h>
 #include <TinyGPS++.h>
-
+#define blaud_serial 9600
 // Pinos para comunicação com o GPS
 static const int RXPin = 4, TXPin = 3;
 static const uint32_t GPSBaud = 9600;
@@ -10,7 +10,7 @@ SoftwareSerial gpsSerial(RXPin, TXPin);
 TinyGPSPlus gps;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(blaud_serial);
   gpsSerial.begin(GPSBaud);
   Serial.println("Iniciando GPS NEO-6M...");
 }
