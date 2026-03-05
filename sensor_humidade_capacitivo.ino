@@ -1,12 +1,13 @@
 int sensorPin = A0;   // pino conectado ao OUT do sensor
-int valorSensor = 0;
+int Sensor = 0;
 
 void setup() {
-  Serial.begin(9600); // inicia comunicação serial
+  Serial.begin(9600);
 }
 
 void loop() {
   valorSensor = analogRead(sensorPin); // lê valor entre 0 e 1023
-  Serial.println(valorSensor);         // envia para o PC
+  Serial.println(Sensor);         // envia para o PC
   delay(1000);                         // espera 1 segundo
+
 }
